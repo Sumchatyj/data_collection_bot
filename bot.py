@@ -1,15 +1,11 @@
 import os
-from dotenv import load_dotenv
-from telegram.ext import (
-    ApplicationBuilder,
-    ContextTypes,
-    CommandHandler,
-    MessageHandler,
-    filters
-)
-from telegram import ForceReply, Update
-from data_handler.xls_handler import read_excel_file
 
+from dotenv import load_dotenv
+from telegram import ForceReply, Update
+from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
+                          MessageHandler, filters)
+
+from data_handler.xls_handler import read_excel_file
 
 load_dotenv()
 

@@ -1,12 +1,13 @@
-from pandas import read_excel
-from lxml import html
-import ssl
-import certifi
 import re
-from .database import insert_data
+import ssl
 from statistics import mean
-import aiohttp
 
+import aiohttp
+import certifi
+from lxml import html
+from pandas import read_excel
+
+from .database import insert_data
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
