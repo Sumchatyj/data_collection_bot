@@ -24,4 +24,4 @@ def insert_data(data: list):
 
 
 if __name__ == "__main__":
-    insert_data([['snk', 'snkn', 'xcklj']])
+    create_db()

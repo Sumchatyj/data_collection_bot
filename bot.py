@@ -30,9 +30,13 @@ async def get_doc(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_html(
         "Let me think for a second"
     )
+    try:
+        os.mkdir('tmp/')
+    except FileExistsError:
+        pass
     file_id = update.message.document.file_id
     new_file = await context.bot.get_file(file_id)
-    path = f'./tmp/{file_id}'
+    path = f'tmp/{file_id}'
     await new_file.download_to_drive(custom_path=path)
     values, mean_price = await read_excel_file(path)
     os.remove(path)

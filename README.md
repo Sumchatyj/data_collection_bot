@@ -41,7 +41,7 @@ TOKEN=your bot token
 Creata a database:
 
 ```
-python data_handler/database/create_db.py
+python data_handler/database.py
 ```
 
 Start the bot:
