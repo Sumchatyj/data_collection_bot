@@ -39,7 +39,7 @@ async def scrape_data(values: list) -> list:
     return prices
 
 
-async def read_excel_file(path: str):
+async def read_excel_file(path: str) -> tuple[str, int]:
     df = read_excel(path)
     values = [df.columns.values.tolist()] + df.values.tolist()
     insert_data(values)
